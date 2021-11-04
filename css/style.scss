@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+* {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h3 {
+  text-align: center;
+}
+
+body {
+  .cover {
+    width: 100%;
+    height: auto;
+    background-color: aqua;
+
+    img {
+      width: 100%;
+    }
+    .menu {
+      ul {
+        height: auto;
+        background-color: black;
+        li {
+          display: inline-block;
+          padding: 0 1em;
+          a {
+            color: white;
+            text-decoration: none;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+    h1 {
+      margin-top: 1em;
+      text-align: center;
+      font-size: 4em;
+    }
+    .payment {
+      height: 20vh;
+      background-color: yellow;
+      display: flex;
+      padding: 0.5em 1em;
+
+      img {
+        width: 100%;
+        height: 70%;
+        padding: 2%;
+      }
+
+      .cards,
+      .bitcoin {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+  .services {
+    .service-1,
+    .service-2,
+    .service-3,
+    .service-4 {
+    }
+  }
+  .facilities {
+    .facility-1,
+    .facility-2,
+    .facility-3,
+    .facility-4 {
+    }
+  }
+  .food {
+    .food-1,
+    .food-2,
+    .food-3 {
+    }
+  }
+  .locations {
+    .location-1,
+    .location-2,
+    .location-3 {
+    }
+  }
+  .contact {
+    .area1,
+    .area2 {
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+  }
+  .cover {
+  }
+}
