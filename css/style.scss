@@ -10,19 +10,20 @@
 
 h3 {
   text-align: center;
+  font-size: 1.5em;
 }
 
 body {
   .cover {
     width: 100%;
     height: auto;
-    background-color: aqua;
 
     img {
       width: 100%;
     }
     .menu {
       ul {
+        text-align: center;
         height: auto;
         background-color: black;
         li {
@@ -31,6 +32,7 @@ body {
           a {
             color: white;
             text-decoration: none;
+            font-size: 0.8em;
             font-weight: 900;
           }
         }
@@ -42,8 +44,8 @@ body {
       font-size: 4em;
     }
     .payment {
-      height: 20vh;
-      background-color: yellow;
+      height: auto;
+
       display: flex;
       padding: 0.5em 1em;
 
@@ -61,32 +63,53 @@ body {
       }
     }
   }
+
   .services {
+    height: auto;
+    // display: flex;
+    // flex-direction: column;
+
     .service-1,
     .service-2,
     .service-3,
     .service-4 {
+      img {
+        width: 100%;
+      }
+      p {
+        margin: 1em;
+      }
     }
+  }
+  h3 {
+    margin-top: 2em;
   }
   .facilities {
     .facility-1,
     .facility-2,
     .facility-3,
     .facility-4 {
+      img {
+        max-height: 200px;
+        width: 100%;
+      }
     }
   }
   .food {
+    // display: flex;
+    // flex-direction: column;
+    align-items: center;
+
     .food-1,
-    .food-2,
-    .food-3 {
+    .food-2 {
+      img {
+        margin: 2em;
+        min-width: 200px;
+        max-height: 200px;
+      }
     }
   }
-  .locations {
-    .location-1,
-    .location-2,
-    .location-3 {
-    }
-  }
+
   .contact {
     .area1,
     .area2 {
@@ -94,9 +117,76 @@ body {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 750px) {
   body {
   }
+  h3 {
+    font-size: 1.5em;
+  }
   .cover {
+    .menu {
+      ul {
+        text-align: center;
+        li {
+          a {
+            font-size: 2em;
+          }
+        }
+      }
+    }
+
+    .payment {
+      height: 100vh;
+      width: 100%;
+      .cards,
+      .bitcoin {
+      }
+    }
+  }
+  .services {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .service-1,
+    .service-2,
+    .service-3,
+    .service-4 {
+      margin: 0.5em;
+    }
+  }
+
+  .facilities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    .facility-1,
+    .facility-2,
+    .facility-3,
+    .facility-4 {
+      margin: 0.5em;
+      img {
+        height: 180px;
+      }
+    }
+  }
+
+  .food {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    .food-1,
+    .food-2 {
+      img {
+        margin: 1.5em;
+        min-width: 200px;
+        max-height: 200px;
+      }
+    }
+    .food-1 {
+      grid-column: 2/3;
+    }
+    .food-2 {
+      grid-template-columns: 3/4;
+    }
   }
 }
